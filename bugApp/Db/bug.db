@@ -1,0 +1,33 @@
+record(bo, "$(P)TRIGGER_CMD") {
+    field(DTYP, "Python Device")
+    field(OUT,  "@devsup.ptable bug set trigger")
+    field(VAL,  "1")
+    field(SCAN, "1 second")
+}
+
+record(ao, "$(P)A_CSET") {
+    field(DTYP, "Python Device")
+    field(OUT,  "@devsup.ptable bug set a")
+    field(VAL,  "1")
+    field(PINI, "YES")
+    field(PREC, "1")
+}
+
+record(ao, "$(P)B_CSET") {
+    field(DTYP, "Python Device")
+    field(OUT,  "@devsup.ptable bug set b")
+    field(VAL,  "2")
+    field(PINI, "YES")
+    field(PREC, "1")
+}
+
+record(ai, "$(P)SUM_RD") {
+    field(DTYP, "Python Device")
+    field(INP,  "@devsup.ptable bug get s")
+    field(PINI, "YES")
+    field(PREC, "1")
+    field(VAL,  "0")
+    field(SCAN, "I/O Intr")
+}
+
+
